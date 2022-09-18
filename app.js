@@ -1,31 +1,17 @@
-let h1TagSize = document.querySelector("#size-h1");
-let h2TagSize = document.querySelector("#size-h2");
-let h3TagSize = document.querySelector("#size-h3");
+let showLoading = document.querySelector("#loading-show");
+let doneLoading = document.querySelector("#loading-done");
 
-let outputText =document.querySelector("#heading");
+let loadingText =document.querySelector("#loading-text");
 
-h1TagSize.addEventListener("click", () => {
+showLoading.addEventListener("click", () => {
 
-    var h1El = '<h1>' + outputText.innerHTML + '</h1>';
-    
-    outputText.innerHTML = h1El;
+    loadingText.innerText = "loading......"
+    loadingText.style.display = "block";
 
 })
 
-h2TagSize.addEventListener("click", () => {
+doneLoading.addEventListener("click", () => {
 
-    var h2El = '<h2>' + outputText.innerHTML + '</h2>';
-
-    outputText.innerHTML = h2El;
-
+    loadingText.style.display = "none";
 
 })
-
-h3TagSize.addEventListener("click", () => {
-
-    var h3El = '<h3>' + outputText.innerHTML + '</h3>';
-
-    outputText.innerHTML = h3El;
-
-})
-
